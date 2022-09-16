@@ -88,6 +88,20 @@ namespace LinkedList
             }
             return node;
         }
+        // Method create "Pop"
+        public Node Pop()
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return node;
+        }
         // Adding method for Display
         internal void Display()                         
         {
