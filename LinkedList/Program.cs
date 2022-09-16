@@ -11,7 +11,7 @@
             while (flag)
             {
                 
-                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements \n3.Appending the Elemente ");
+                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements \n3.Appending the Elemente \n 4. Insert At Required Position ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +36,10 @@
                         list.Display();
                         break;
 
+                    case 4:
+                        list.InsertAtParticularPosition(16, 46);
+                        list.Display();
+                        break;
                 }
             }
         }

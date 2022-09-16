@@ -61,6 +61,33 @@ namespace LinkedList
             }
             Console.WriteLine("{0} appended into linked list", node.data);
         }
+        // Method create "InsertAtParticularPosition"
+        internal Node InsertAtParticularPosition(int Position, int data)
+        {
+            Node node = new Node(data);
+            if (Position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+
+            }
+            else if (Position == 1)
+            {
+                node.next = this.head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (Position > 2)
+                {
+                    temp = temp.next;
+                    Position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+            return node;
+        }
         // Adding method for Display
         internal void Display()                         
         {
