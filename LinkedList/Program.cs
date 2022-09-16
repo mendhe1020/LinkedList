@@ -11,7 +11,7 @@
             while (flag)
             {
                 
-                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements ");
+                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements \n3.Appending the Elemente ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -28,6 +28,14 @@
                         list.AddInReverseOrder(56);
                         list.Display();
                         break;
+
+                    case 3:
+                        list.Appending(56);
+                        list.Appending(30);
+                        list.Appending(70);
+                        list.Display();
+                        break;
+
                 }
             }
         }

@@ -42,6 +42,25 @@ namespace LinkedList
                 head.next = temp;
             }
         }
+        // Method create "Append"
+        public void Appending(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node node1 = head;
+                while (node1.next != null)
+                {
+                    node1 = node1.next;
+                }
+                node1.next = node;
+            }
+            Console.WriteLine("{0} appended into linked list", node.data);
+        }
         // Adding method for Display
         internal void Display()                         
         {
