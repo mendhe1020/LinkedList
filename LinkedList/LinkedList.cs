@@ -88,20 +88,21 @@ namespace LinkedList
             }
             return node;
         }
-        // Method create "Pop"
-        public Node Pop()
+        public Node DeletingFirstPosition()           
         {
             Node node = head;
             if (head == null)
             {
-                Console.WriteLine("Linked List is Empty");
+                Console.WriteLine("Linked List is empty: ");
             }
             else
             {
                 head = head.next;
             }
+            Console.WriteLine("{0} is the Deleted first Position element from linked list", node.data);
             return node;
         }
+
         // Adding method for Display
         internal void Display()                         
         {
@@ -115,6 +116,25 @@ namespace LinkedList
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        // Deletiong the Last element form Linked List 
+        public void DeletingLastPosition()             
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            else
+            {
+                Node n = head;
+                while (n.next.next != null)
+                {
+                    n = n.next;
+                }
+                Node removeNode = n.next;
+                n.next = null;
+                Console.WriteLine("{0} is the Deleted Last Position element from linked list", removeNode.data);
             }
         }
     }

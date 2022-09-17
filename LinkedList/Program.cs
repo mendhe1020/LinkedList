@@ -11,7 +11,7 @@
             while (flag)
             {
                 
-                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements \n3.Appending the Elemente \n 4. Insert At Required Position \n5.Delete the first element in linked list ");
+                Console.WriteLine("1.Create a Linked List / n2.Add Reversed order of Elements \n3.Appending the Elemente \n 4. Insert At Required Position \n5.Delete the first element in linked list  \n 6. Deleting Last Element ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,7 +42,18 @@
                         break;
 
                     case 5:
-                        list.Pop();
+                        list.Add(56);
+                        list.Add(30);
+                        list.Add(70);
+                        list.DeletingFirstPosition();
+                        list.Display();
+                        break;
+
+                    case 6:
+                        list.Add(56);
+                        list.Add(30);
+                        list.Add(70);
+                        list.DeletingLastPosition();
                         list.Display();
                         break;
                 }
